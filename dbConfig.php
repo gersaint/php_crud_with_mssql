@@ -2,22 +2,21 @@
 <?php
 
 // Sql server configuration
-$serverName = "localhost\SQLServer";
+$serverName = "localhost\sqlexpress";
 $dbUserName = "";
 $dbPassword = "";
-$dbName = "";
+$dbName = "SQLTutorial";
 
 // Create Connection
 
 try {
 
     $conn = new PDO ( "sqlsrv:Server=$serverName; 
-                       Database=$dbName", 
-                       $dbUserName , 
-                       $dbPassword );
+                        Database=$dbName", 
+                        $dbUserName , 
+                        $dbPassword );
 
     $conn -> setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-
 
 } catch (PDOException $e) { 
 
